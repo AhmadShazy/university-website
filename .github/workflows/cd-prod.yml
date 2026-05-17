@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────
+# CD Pipeline — Production Deployment
+# Triggers: after CI passes on 'main'
+# Requires manual approval (production protection)
+# ─────────────────────────────────────────────
+
+name: CD — Production Deploy
+
+on:
+  workflow_run:
+    workflows: ["CI — Production"]
+    types:
+      - completed
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    environment: production       # This environment has required reviewers set
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Render Production Deployment
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_PROD }}"
+
+      - name: Production Deployment Notification
+        run: echo "🚀 Production environment deployed successfully!"

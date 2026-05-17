@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions — COMSATS CS Department</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">CUI</div>
+      <div class="nav-title">COMSATS University<span>Department of Computer Science</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faculty.html">Faculty</a></li>
+      <li><a href="admissions.html" class="active">Admissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Admissions</h1>
+    <p>Join Pakistan's leading Computer Science department — Fall 2025 applications now open</p>
+  </div>
+
+  <!-- ELIGIBILITY -->
+  <div class="section">
+    <div class="section-title">
+      <h2>Eligibility Criteria</h2>
+      <span class="underline"></span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Minimum Qualification</th>
+            <th>Minimum Marks</th>
+            <th>Entry Test</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>BSCS</strong></td>
+            <td>Intermediate (Pre-Engineering / ICS)</td>
+            <td>50% aggregate</td>
+            <td>NAT-I / COMSATS Test</td>
+            <td>4 Years</td>
+          </tr>
+          <tr>
+            <td><strong>BSSE</strong></td>
+            <td>Intermediate (Pre-Engineering / ICS)</td>
+            <td>50% aggregate</td>
+            <td>NAT-I / COMSATS Test</td>
+            <td>4 Years</td>
+          </tr>
+          <tr>
+            <td><strong>MSCS</strong></td>
+            <td>BS (CS / SE / IT) or equivalent</td>
+            <td>2.5 CGPA or 60%</td>
+            <td>GAT-General / GRE</td>
+            <td>2 Years</td>
+          </tr>
+          <tr>
+            <td><strong>PhD CS</strong></td>
+            <td>MS / MPhil in CS or related field</td>
+            <td>3.0 CGPA or 70%</td>
+            <td>GAT-Subject / GRE</td>
+            <td>3–5 Years</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="section" style="padding-top:0;">
+    <div class="section-title">
+      <h2>Admission Process</h2>
+      <span class="underline"></span>
+    </div>
+    <div class="grid-4">
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">📝</div>
+        <h3>Step 1: Apply Online</h3>
+        <p>Submit application via COMSATS admission portal with required documents.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">📋</div>
+        <h3>Step 2: Entry Test</h3>
+        <p>Appear in NAT or COMSATS entry test. Merit is calculated on marks + test score.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">📊</div>
+        <h3>Step 3: Merit List</h3>
+        <p>Merit list published on university website. Check your status online.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">🎓</div>
+        <h3>Step 4: Enrollment</h3>
+        <p>Pay fee and submit documents at the admissions office to confirm enrollment.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLICATION FORM -->
+  <div class="section" style="padding-top:0;">
+    <div class="section-title">
+      <h2>Online Application Form</h2>
+      <span class="underline"></span>
+      <p>Fill in your details below to start your admission inquiry</p>
+    </div>
+    <div class="form-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" placeholder="Muhammad" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" placeholder="Ali" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" placeholder="+92-300-0000000" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="program">Program Applying For *</label>
+          <select id="program" required>
+            <option value="">-- Select Program --</option>
+            <option>BSCS — BS Computer Science</option>
+            <option>BSSE — BS Software Engineering</option>
+            <option>MSCS — MS Computer Science</option>
+            <option>PhD CS — Doctor of Philosophy</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="session">Session *</label>
+          <select id="session" required>
+            <option value="">-- Select Session --</option>
+            <option>Fall 2025</option>
+            <option>Spring 2026</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cnic">CNIC / B-Form Number *</label>
+        <input type="text" id="cnic" placeholder="35202-XXXXXXX-X" required />
+      </div>
+      <div class="form-group">
+        <label for="qualification">Highest Qualification</label>
+        <input type="text" id="qualification" placeholder="e.g. FSc Pre-Engineering, 85%" />
+      </div>
+      <div class="form-group">
+        <label for="message">Additional Information</label>
+        <textarea id="message" rows="4" placeholder="Any additional details, scholarships inquiry, etc."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Submit Application</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>COMSATS University Islamabad</h3><p>Department of Computer Science, Lahore Campus.</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="faculty.html">Faculty</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="#">BSCS</a></li><li><a href="#">BSSE</a></li><li><a href="#">MSCS</a></li><li><a href="#">PhD CS</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">Lahore Campus, Defence Road</a></li><li><a href="#">+92-42-111-001-007</a></li><li><a href="#">cs@comsats.edu.pk</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 COMSATS University Islamabad — Department of Computer Science.</p></div>
+  </footer>
+
+</body>
+</html>

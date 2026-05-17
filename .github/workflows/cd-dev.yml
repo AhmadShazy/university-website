@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────
+# CD Pipeline — Development Deployment
+# Triggers: after CI passes on 'develop'
+# Deploys to: Render development service
+# ─────────────────────────────────────────────
+
+name: CD — Development Deploy
+
+on:
+  # Only deploy AFTER the CI pipeline completes successfully
+  workflow_run:
+    workflows: ["CI — Development"]
+    types:
+      - completed
+    branches:
+      - develop
+
+# Use the 'development' GitHub Environment (has its own secrets)
+jobs:
+  deploy:
+    name: Deploy to Development
+    runs-on: ubuntu-latest
+    environment: development      # GitHub Environment name
+
+    # Only deploy if CI actually passed (not if it failed)
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Trigger Render deployment via Deploy Hook
+      # RENDER_DEPLOY_HOOK_DEV is stored in GitHub Environment secrets
+      - name: Trigger Render Deployment
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_DEV }}"
+
+      - name: Deployment Notification
+        run: echo "✅ Development environment deployed successfully!"
